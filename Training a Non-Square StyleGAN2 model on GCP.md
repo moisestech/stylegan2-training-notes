@@ -52,7 +52,7 @@
 </ol>
 <h2 id="upload-dataset-images-in-gcp-arrow_up">5. Upload Dataset images in GCP ⬆️</h2>
 <ol>
-<li>Use GDown</li>
+<li>Use <a href="https://pypi.org/project/gdown/">GDown</a></li>
 <li>Pass the ID to a file</li>
 <li>On GDrive, toggle Share linking on and copy the ID<pre><code>gdown --id id-ofyour-gdrive-zip-file
 </code></pre>
@@ -100,94 +100,88 @@
 <li>
 <p>Config f 1024</p>
 </li>
-</ul>
+<li>
 <p>Change --dataset=””</p>
+</li>
+<li>
 <p>By ignoring vertical = false</p>
+</li>
+<li>
 <p>Total kimages 20k is fine</p>
-<p>–res-log2=7 power of 2</p>
+</li>
+<li>
+<p>—res-log2=7 power of 2</p>
+</li>
+<li>
 <p>w=2^6  768</p>
+</li>
+<li>
 <p>h=2^8*5  1200</p>
+</li>
+<li>
 <p>Image sizes 128 or 256s</p>
+</li>
+<li>
 <p>This repo recommends that if you are doing 128 it recommends you use 7</p>
+</li>
+<li>
 <p>Because that 8th channel although it makes the network a little bit deeper it makes it smaller overall</p>
+</li>
+<li>
 <p>You can’t do a 16:9 or 720p</p>
-<p>We are ready to start training this picks up from this pkl file</p>
-<p>Covert some things its a bit slower the first time because it is caching some files</p>
-<p>Data shape, dynamic shape</p>
-<p>Range 0-255 256 the size that we can work with loading networks</p>
-<p>Custom Cuda commands compile</p>
-<p>(2- 5 minute wait)</p>
-<p>Outputting the architecture</p>
-<p>Note hub mode works</p>
-<p>Building Tensorflow graph</p>
-<p>Training for 20k im,ages</p>
-<p>In csse your dataset the tfrecorsd creation and thow an error here</p>
-<p>You will produce a pkl file from its current status</p>
-<p>Gcp close when i close</p>
-<p>Outputting pickling up from the same imag</p>
-<p>Large of the minibatches</p>
-<p>Timing how much memory im using underestimates</p>
-<p>Ctrl C</p>
-<p>The issue was reactivate the right environment</p>
-<p>Run this script</p>
-<p>Nohup close this browser window it would stop that command</p>
-<p>You could install gnu you could installl gmux</p>
-<p>Nohup ,out asses wether this is working</p>
-<ul>
-<li>
-<p>5 mins after</p>
-</li>
-<li>
-<p>Background in nohup</p>
-</li>
-<li>
-<p>Essentially it is a background process on the gpu</p>
-</li>
-<li>
-<p>Nvdia -smi</p>
-</li>
-<li>
-<p>Cuda version 4.0</p>
-</li>
-<li>
-<p>How much gpu are you using</p>
 </li>
 </ul>
-<p>Process ID python 15.7gb</p>
+<h2 id="start-training">Start Training</h2>
 <ul>
-<li>
-<p>This is your command running on the gpu</p>
-</li>
-<li>
-<p>Kill -9 PID number</p>
-</li>
+<li>We are ready to start training this picks up from this pkl file</li>
+<li>Covert some things its a bit slower the first time because it is caching some files</li>
+<li>Data shape, dynamic shape</li>
+<li>Range 0-255 256 the size that we can work with loading networks</li>
+<li>Custom Cuda commands compile</li>
+<li>(2- 5 minute wait)</li>
+<li>Outputting the architecture</li>
+<li>Note hub mode works</li>
+<li>Building Tensorflow graph</li>
+<li>Training for 20k images</li>
+<li>In csse your dataset the tfrecorsd creation and thow an error here</li>
+<li>You will produce a pkl file from its current status</li>
+<li>Gcp close when i close</li>
+<li>Outputting pickling up from the same imag</li>
+<li>Large of the mini batches</li>
+<li>Timing how much memory im using underestimates</li>
+<li>Ctrl C</li>
+<li>The issue was reactivate the right environment</li>
+<li>Run this script</li>
+<li>Nohup close this browser window it would stop that command</li>
+<li>You could install gnu you could installl gmux</li>
+<li>Nohup ,out asses wether this is working</li>
+<li>5 mins after</li>
+<li>Background in nohup</li>
+<li>Essentially it is a background process on the gpu</li>
+<li>Nvdia -smi</li>
+<li>Cuda version 4.0</li>
+<li>How much gpu are you using</li>
+<li>Process ID python 15.7gb</li>
+<li>This is your command running on the gpu</li>
+<li>Kill -9 PID number</li>
 </ul>
-<p>24 hours</p>
+<h2 id="day-of-training-later..">1 Day of Training Later…</h2>
 <ul>
-<li>
-<p>Skyfly nil folder</p>
-</li>
-<li>
-<p>Nvdia smi</p>
-</li>
-<li>
-<p>Ls results</p>
-</li>
-<li>
-<p>cd/results/0003-stylegan2-your_dataset_name</p>
-</li>
-<li>
-<p>80k images later the flower are swirly 500k images gets to a really good point</p>
-</li>
-<li>
-<p>Truncation value good looking stuff</p>
-</li>
+<li>24 hours of training later</li>
+<li>Skyfly nil folder</li>
+<li>Nvdia smi</li>
 </ul>
-<p>Download the nohup .out file</p>
-<p>Ls pwd</p>
-<p>Download file no-hub.out</p>
-<p>Scroll to the bottom</p>
-<p>Text output</p>
-<p>A tick is a certain number of kimages what you set a mini batch too</p>
-<p>How long does it take to train a tick faster with how quickly it takes</p>
+<p><code>ls results</code><br>
+<code>cd/results/0003-stylegan2-your_dataset_name</code></p>
+<ul>
+<li>80k images later the flower are swirly 500k images gets to a really good point</li>
+<li>Truncation value good looking stuff</li>
+<li>Download the nohup .out file<br>
+<code>ls pwd</code></li>
+<li>Download file no-hub.out</li>
+<li>Scroll to the bottom</li>
+<li>Text output</li>
+<li>A tick is a certain number of kimages what you set a mini batch too</li>
+<li>How long does it take to train a tick faster with how quickly it takes</li>
+</ul>
 
