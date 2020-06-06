@@ -37,7 +37,7 @@
 </code></pre>
 </li>
 </ol>
-<h2 id="set-up-dataset-folder-file_folder-">4.  Set-up Dataset Folder 📁 *</h2>
+<h2 id="set-up-dataset-folder-file_folder-">4.  Set-up Dataset Folder 📁 <a href="https://youtu.be/Ij1dqSVR89M?t=176">*</a></h2>
 <ol>
 <li>Move into the skyflynil folder and go into the folder <em>datasets</em></li>
 <li>Place all TFRecords in the datasets folder.</li>
@@ -151,9 +151,9 @@
 </ul>
 <h2 id="check-on-your-training-eyes-">10. Check on Your Training 👀 <a href="https://youtu.be/Ij1dqSVR89M?t=1130">*</a></h2>
 <p><strong>Notes:</strong></p>
-<ul>
+<ol>
 <li>We are ready to start training, it will display that is is training from your last 🌵 .pkl file</li>
-</ul>
+</ol>
 <p><img src="https://github.com//Moises404/stylegan2-training-notes/blob/master/Training_NonSquareModel.png?raw=true" alt="enter image description here"></p>
 <ul>
 <li>Its might be a bit slower the first time on the same machine because it is caching some files.</li>
@@ -163,59 +163,59 @@
 <li>Range 0-255 256 the size that we can work with loading networks</li>
 </ul>
 </li>
+</ul>
+<ol start="2">
 <li>Custom Cuda commands compile
 <ul>
 <li>(2- 5 minute wait) 🕓</li>
 <li>Outputting the architecture</li>
 </ul>
 </li>
-</ul>
+</ol>
 <p><img src="https://raw.githubusercontent.com/Moises404/stylegan2-training-notes/master/Training_NonSquareModel_InProcess_2.png" alt="enter image description here"></p>
-<p><img src="https://raw.githubusercontent.com/Moises404/stylegan2-training-notes/master/Training_NonSquareModel_Confirmed_Training.png" alt="enter image description here"></p>
-<ul>
-<li>To confirm ✅, terminal should output process above 👆
+<p><img src="https://raw.githubusercontent.com/Moises404/stylegan2-training-notes/master/Training_NonSquareModel_Confirmed_Training.png" alt="enter image description here"><br>
+3. To confirm ✅, terminal should output process above 👆</p>
 <ul>
 <li>Building <em>Tensorflow graph</em></li>
 <li>Training for <em>20 kimages</em></li>
-<li>You will produce an initial 🌵 .pkl file from its current status</li>
+<li>You will produce an initial 🌵 .pkl file from its current status.</li>
+<li>Outputting pickling up from the same image</li>
+<li>Size of the <em>mini-batches</em></li>
+<li>Size of <em>gpumem</em> is how much memory the training is using. (underestimates)</li>
 <li><em>Warning:</em> ⚠️ might throw error if the datasets TFRecords file is not the right shape.</li>
 </ul>
-</li>
-</ul>
-<h2 id="note-hub-mode-works">11. Note hub mode works</h2>
+<h2 id="create-training-subprocess-link-">11. Create Training Subprocess 🔗 <a href="https://youtu.be/Ij1dqSVR89M?t=1475">*</a></h2>
 <ul>
-<li></li>
-<li></li>
-</ul>
-<h2 id="create-training-subprocess">12. Create Training Subprocess</h2>
-<ul>
-<li>GCP close when i close</li>
-<li>Outputting pickling up from the same image</li>
-<li>Large of the mini batches</li>
-<li>Timing how much memory I’m using underestimates</li>
-<li>Ctrl-c</li>
-<li>The issue was reactivate the right environment</li>
-<li>Run this script</li>
-<li>Nohup close this browser window it would stop that command</li>
-<li>You could install gnu you could installl gmux</li>
-<li>Nohup ,out asses wether this is working</li>
-<li>5 mins after</li>
-<li>Background in nohup</li>
-<li>Essentially it is a background process on the gpu</li>
-<li>Nvdia-smi</li>
-<li>Cuda version 4.0</li>
-<li>How much gpu are you using</li>
-<li>Process ID python 15.7gb</li>
-<li>This is your command running on the gpu</li>
-<li>Kill -9 PID number</li>
-</ul>
-<h2 id="day-of-training-later..">13. 1 Day of Training Later…</h2>
-<ul>
-<li>24 hours of training later</li>
+<li>GCP terminal when closed, also terminates the training process.</li>
 </ul>
 <ol>
-<li>In GCP head back to your server into the skyflynil folder</li>
-<li>Since no-hub has made the training run as a subprocess you will have to type the Nvdia-smi command to check that it is running properly</li>
+<li><a href="https://en.wikipedia.org/wiki/Nohup">Nohup</a> re-running the script using <em>Nohup</em> is a background process in the GPU that will allow us to close the browser window and continue the training process.</li>
+</ol>
+<p><img src="https://github.com/Moises404/stylegan2-training-notes/blob/master/Training_nohup_start.png?raw=true" alt="enter image description here"></p>
+<ul>
+<li>Other solutions: Install gnu, gmux</li>
+</ul>
+<ol start="2">
+<li>Now we will check <em>nohup.out</em> to asses wether this is working as a background process.</li>
+</ol>
+<pre><code>Nvdia-smi
+</code></pre>
+<p><img src="https://github.com/Moises404/stylegan2-training-notes/blob/master/Training-Nvdia-smi.png?raw=true" alt="enter image description here"></p>
+<ul>
+<li>Cuda version 4.0</li>
+<li>How much GPU are you using</li>
+<li>Process ID python 15.7gb</li>
+<li>This is your command running on the GPU</li>
+</ul>
+<pre><code>Kill -9 PID number
+</code></pre>
+<h2 id="day-of-training-later..-sunrise">13. 1 Day of Training Later… 🌅</h2>
+<ul>
+<li>24 hours of training later  🕓</li>
+</ul>
+<ol>
+<li>In <a href="console.cloud.google.com">GCP</a> head back to your server into the skyflynil folder 📁</li>
+<li>Since <em>nohup</em> has made the training run as a subprocess you will have to type the Nvdia-smi command to check that it is running properly</li>
 </ol>
 <pre><code>Nvdia-smi
 </code></pre>
@@ -230,20 +230,23 @@
 <pre><code>cd/results/0003-stylegan2-your_dataset_name
 </code></pre>
 <ul>
-<li>80k images later the flower are swirly</li>
-<li>500k images gets to a really good point</li>
-<li>Truncation value good looking stuff</li>
+<li>Training 80k images can start reflecting dataset ok enough.</li>
+<li>Training up to 500k images gets to a really good point</li>
+<li>Truncation values will vary in displayed results.</li>
 </ul>
-<ol start="5">
+<h2 id="download-file-arrow_heading_down-nohup.out-bookmark_tabs-">14. Download file ⤵️ nohup.out 📑 <a href="https://youtu.be/Ij1dqSVR89M?t=1963">*</a></h2>
+<ol>
 <li>Download the nohup .out file</li>
 </ol>
 <pre><code>ls pwd
 </code></pre>
+<p><img src="https://github.com/Moises404/stylegan2-training-notes/blob/master/Training_DownloadFiles2.png?raw=true" alt="enter image description here"><br>
+2. Open in Text Editor and scroll to the bottom</p>
+<p><img src="https://raw.githubusercontent.com/Moises404/stylegan2-training-notes/master/Training_Reading_nohup_files.png" alt="enter image description here"></p>
+<p><strong>Notes:</strong></p>
 <ul>
-<li>Download file no-hub.out</li>
-<li>Scroll to the bottom</li>
-<li>Text output</li>
 <li>A <em>tick</em> is a certain number of <em>kimages</em>, depending on what you set your <em>mini-batch</em> too</li>
 <li>How long does it take to train a tick faster with how quickly it takes</li>
 </ul>
+<p>Hope these notes help to breakdown the StyleGAN2 video tutorial for reference in the future. 🚀</p>
 
