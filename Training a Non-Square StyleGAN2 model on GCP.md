@@ -5,7 +5,7 @@
 
 <h1 id="training-a-non-square-stylegan2-model-on-gcp">Training a Non-Square StyleGAN2 model on GCP</h1>
 <p><strong>#stylegan2</strong> <strong>#non-square</strong>  <strong>#gcp</strong></p>
-<p>Notes 📝 based on <a href="www.youtube.com/watch?v=Ij1dqSVR89M">Training StyleGAN2 Part 2 Video</a> 🎥 taught in the <a href="%5Bhttps://bustbright.square.site/s/shop%5D(https://bustbright.square.site/s/shop)">StyleGAN2 DeepDive course</a> 📚by <a href="%5Bhttps://twitter.com/dvsch%5D(https://twitter.com/dvsch)">@Derrick Schultz</a> and <a href="%5Bhttps://twitter.com/Lialialiacole%5D(https://twitter.com/Lialialiacole)">@Lia Coleman</a>. The asterisk * on each numbered section will link to the video timecode of the tutorial.</p>
+<p>Notes 📝 based on <a href="www.youtube.com/watch?v=Ij1dqSVR89M">Training StyleGAN2 Part 2 Video</a> 🎥 taught in the <a href="https://bustbright.square.site/product/machine-learning-class-stylegan/286?cp=true&sa=true&sbp=false&q=false">StyleGAN2 DeepDive course</a> 📚by <a href="https://twitter.com/dvsch">@Derrick Schultz</a> and <a href="https://twitter.com/Lialialiacole">@Lia Coleman</a>. The asterisk * on each numbered section will link to the video timecode of the tutorial.</p>
 <h2 id="start-up-server-gear-">1. Start-up Server ⚙️ <a href="https://youtu.be/Ij1dqSVR89M?t=19">*</a></h2>
 <ol>
 <li>Login into <a href="console.cloud.google.com">GCP</a></li>
